@@ -44,6 +44,7 @@ border: 1px solid rgba(0,0,0,0.2);
 .hero-unit{
   padding: 0px;
   background: #222 url(img/background.jpg) no-repeat 50% top;
+  background-size: cover;
   border-radius: 0;
   margin-bottom: 0;
 }
@@ -70,6 +71,7 @@ border: 1px solid rgba(0,0,0,0.2);
 .navbar .nav{
   padding: 0;
   margin: 0;
+  float: right;
 }
 .navbar .nav > li > a{
   font-weight: bold;
@@ -78,9 +80,10 @@ border: 1px solid rgba(0,0,0,0.2);
   color: #fff;
   padding: 3px 20px;
 }
-.navbar .nav > li > a:hover{
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
   color: rgba(255,255,255,0.7);
   border-bottom: none;
+  background: none;
 }
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
   box-shadow: none;
@@ -90,7 +93,50 @@ border: 1px solid rgba(0,0,0,0.2);
   border-radius: 3px;
   color: #fff;
 }
+.navbar .btn-navbar{
+  background: #fff;
+  border: none;
+}
+.navbar .btn-navbar .icon-bar{
+  background: #000;
+  box-shadow: none;
+}
 /** end of navbar styling **/
+/**.baner styling**/
+  .carousel-control{
+    border-radius: 0;
+    border: none;
+    font-size: 32px;
+    width: 20px;
+    height: 60px;
+    line-height: 55px;
+    background: #000;
+    opacity: 0.7;
+  }
+  .carousel-control:hover{
+    border: none;
+    background: #000;
+    opacity: 0.8;
+  }
+  .carousel-control .left{
+    left: 0;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  .carousel-control .right{
+    right: 0;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+/** end of banner styling**/
 /**.hero-unit text styling**/
 .hero-unit-inner h1{
   font-size: 48px;
@@ -281,4 +327,34 @@ margin-bottom: 30px;
 }
 .social-sprite.facebook{
   background-position:-16px top;
+}
+/* Portrait tablet to landscape and desktops*/
+@media (min-width: 768px) and (max-width: 979px){
+  .navbar .nav{
+    float: none;
+    margin-bottom: 20px;
+  }
+  body{
+    padding: 0;
+  }
+}
+/*Landscape phone to portrait tablet*/
+@media (max-width: 767px){
+  .navbar .nav{
+    float: none;
+    margin-bottom: 20px;
+  }
+  body{
+    padding: 0;
+  }
+  .hero-unit-inner{
+    padding: 0 40px;
+  }
+  .plan, .design, .develop, .launch, .testimonials, .blog, .tweets, .p-item{
+    margin-bottom: 40px;
+    padding: 0 40px;
+  }
+  #partners img{
+    margin-bottom: 40px;
+  }
 }
